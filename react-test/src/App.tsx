@@ -2,8 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 // const proxy = "http://localhost:8000"
-const check = async() => await fetch('/api/hey').then(res => console.log(res));
+let test;
+const check = async() => await fetch('/check').then(res => res.json())
+.then(res => console.log(res));
 check();
+console.log(check());
+console.log(test);
+
+
 function App() {
   return (
     <div className="App">
